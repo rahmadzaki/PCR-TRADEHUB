@@ -52,30 +52,14 @@
                 <span class="hide-menu">Postingan Saya</span>
               </a>
             </li>
-            <li class="sidebar-item">
+            <!-- <li class="sidebar-item">
               <a class="sidebar-link" href="<?= site_url('Mahasiswa/') ?>" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
                 </span>
                 <span class="hide-menu">Mahasiswa</span>
               </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="<?= site_url('Auth/') ?>" aria-expanded="false">
-                <span>
-                  <i class="ti ti-login"></i>
-                </span>
-                <span class="hide-menu">Login</span>
-              </a>
-            </li>
-            <!-- <li class="sidebar-item">
-              <a class="sidebar-link" href="" aria-expanded="false">
-                <span>
-                  <i class="ti ti-user-plus"></i>
-                </span>
-                <span class="hide-menu">Register</span>
-              </a> -->
-            </li>
+            </li> -->
             <!-- <li class="sidebar-item">
               <a class="sidebar-link" href="./ui-alerts.html" aria-expanded="false">
                 <span>
@@ -149,7 +133,7 @@
               </a>
             </li> -->
           </ul>
-          
+
         </nav>
         <!-- End Sidebar navigation -->
       </div>
@@ -175,16 +159,21 @@
             </li>
           </ul>
           <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+            <form class="d-flex mx-2" action="<?= site_url('Search') ?>" method="get">
+              <input class="form-control me-2" type="search" placeholder="Cari..." aria-label="Search" name="q">
+              <button class="btn btn-outline-success" type="submit">Cari</button>
+            </form>
             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-              <a href="https://adminmart.com/product/modernize-free-bootstrap-admin-dashboard/" target="_blank" class="btn btn-primary">Login</a>
+              <a href="<?= site_url('Auth/logout/'); ?>" target="_blank" class="btn btn-primary">Logout</a>
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                   aria-expanded="false">
-                  <img src="<?= base_url('assets/') ?>src/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                  <img src="<?= base_url('assets/') ?>src/images/profile/user-1.jpg" alt="" width="35" height="35"
+                    class="rounded-circle">
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
-                  <div class="message-body">
-                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                  <div class="message-body" href="">
+                    <a href="<?= site_url('Profil/') ?>" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-user fs-6"></i>
                       <p class="mb-0 fs-3">My Profile</p>
                     </a>
